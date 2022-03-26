@@ -1,0 +1,135 @@
+Feature: login
+Scenario: login with valid informations
+	Given i am on the login page
+	When i enter a valid username/email
+	And i enter a valid password
+	And i press login
+	Then i should be on user's homepage
+Scenario: login with invalid informations
+	Given i am on the login page
+	When i enter a invalid username/email
+	And i enter a valid password
+	And i press login
+	Then i should see pop up error message
+Scenario: login with invalid informations
+	Given i am on the login page
+	When i enter a valid username/email
+	And i enter a invalid password
+	And i press login
+	Then i should see pop up error message
+
+Feature: investing
+Scenario: buka rekening anda in investing page
+	Given i am on the investing page
+	When i click buka rekening anda button
+	Then i should be on register page
+Scenario: FAQ in investing page
+	Given i am on the investing page
+	When i click a question
+	Then i should be able to see the answer of the question
+
+Feature: pro tools
+Scenario: buka rekening anda in pro tools page
+	Given i am on the pro tools page
+	When i press buka rekening anda button
+	Then i should be on register page
+Scenario: subscribe tools in pro tools page
+	Given i am on the pro tools page
+	When i press subscribe button
+	Then i should be on register page
+
+Feature: academy
+Scenario: play intro video in academy page
+	Given i am on the academy page
+	When i play the intro video
+	Then i should playing the video
+Scenario: modules in academy page
+	Given i am on the academy page
+	When i click on a module
+	Then i should be on clicked module page
+Scenario: unboxing saham in academy page
+	Given i am on the academy page
+	When i click on a unboxing saham menu
+	Then i should be on clicked unboxing saham page
+
+Feature: about us
+Scenario: view information in about us page
+	Given i am on the about us page
+	When i click on about us button
+	Then i view information in the about us page
+
+Feature: blog
+Scenario: subscribe notification
+	Given i am on the blog page
+	When i input email in the textbox
+	And i click on subscribe button
+	Then i should see a popup message "You're subscribed"
+Scenario: search, choose from popup article list under search bar
+	Given i am on the blog page
+	When i input search box "a"
+	And i click on a article
+	Then i should redirect to the clicked article details page
+Scenario: search, choose from article list page
+	Given i am on the blog page
+	When i input search box "a"
+	And i press enter key
+	Then i should redirect to the searched articles page
+Scenario: snips terbaru see all
+	Given i am on the blog page
+	When i click on see all button
+	Then i should redirect to the all snips page
+Scenario: choose snips terbaru 
+	Given i am on the blog page
+	When i click on a snip
+	Then i should redirect to the clicked snip details page
+Scenario: investasi see all
+	Given i am on the blog page
+	When i click on see all button
+	Then i should redirect to the all investasi page
+Scenario: choose investasi knowledge
+	Given i am on the blog page
+	When i click on a investasi knowledge
+	Then i should redirect to the clicked investasi knowledge details page
+Scenario: choose unboxing
+	Given i am on the blog page
+	When i click on a unboxing
+	Then i should redirect to the clicked unboxing details page
+Scenario: choose #musimlaba
+	Given i am on the blog page
+	When i click on a #musimlaba
+	Then i should redirect to the clicked #musimlaba details page
+Scenario: choose event
+	Given i am on the blog page
+	When i click on a event
+	Then i should redirect to the clicked event details page
+Scenario: choose snips explained
+	Given i am on the blog page
+	When i click on a snip
+	Then i should redirect to the clicked snip details page
+
+Feature: Help
+Scenario: back to homepage
+	Given i am on the help page
+	When i click on "ke situs web" button
+	Then i should redirect to the homepage
+Scenario: choose question under search bar
+	Given i am on the help page
+	When i input search box "apa bedanya"
+	And i click on a question
+	Then i should redirect to the clicked question details page
+Scenario: choose article from artikel yang sering dibaca
+	Given i am on the help page
+	When i click on a article
+	Then i should redirect to the clicked article details page
+Scenario: choose kategori from jelajahi semua kategori
+	Given i am on the help page
+	When i click on a category
+	Then i should redirect to the clicked category details page
+Scenario: using chat dengan kami
+	Given i am on the help page
+	When i click on chat dengan kami button
+	Then i should see a chat area on the right side of the page
+Scenario: using kirim email kepada kami
+	Given i am on the help page
+	When i click on kirim email kepada kami button
+	Then i should see a window popup that tells me to choose what app to use for sending emails
